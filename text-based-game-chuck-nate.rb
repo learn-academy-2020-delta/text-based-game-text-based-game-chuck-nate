@@ -216,11 +216,20 @@ while number_of_steps < 1
       while number_of_moves < 1
         puts possible_actions
         user_decision = gets.chomp
-        if user_decision.to_i != 2
+        if user_decision.to_i != 1
             puts "Wrong decision😳, choose again🤭..."
         else
-            puts "Good choice, you blasted some Green Day and all the ghosts disappeared!"
-            number_of_moves += 1
+            puts "Good choice, you found what appears to be a stack of $100's!"
+            puts "What do you wanna do next? "
+            puts possible_actions
+            user_decision = gets.chomp
+            if user_decision.to_i != 2
+                puts "Wrong decision😳, choose again🤭..."
+            else
+                puts "Good choice, you've paid your taxes!"
+                number_of_moves += 1
+            end
+            # number_of_moves += 1
         end
       end
       number_of_steps += 1
@@ -229,6 +238,44 @@ while number_of_steps < 1
   end
 end
 
+# back in the third hallway
+back_of_the_house = "Congratulations, you're at the entrance to the last room! "
+puts back_of_the_house
+puts "What do you wanna do next? "
+number_of_steps = 0
+while number_of_steps < 1
+  puts possible_walk_moves
+  user_decision = gets.chomp
+  # puts user_decision.to_i.class
+  puts "You've entered a room and it's pitch dark. "
+  puts "What do you wanna do next? "
+  number_of_moves = 0
+  number_of_room_actions = 0
+  while number_of_moves < 2
+    puts possible_actions
+    user_decision = gets.chomp
+    if user_decision.to_i != 1
+        puts "Wrong decision😳, choose again🤭..."
+    else
+        puts "Good choice, you found what appears to be a lamp!"
+        number_of_moves += 1
+        while number_of_room_actions < 1
+          puts "What do you wanna do next? "
+          puts possible_actions
+          user_decision = gets.chomp
+          if user_decision.to_i != 2
+              puts "Wrong decision😳, choose again🤭..."
+          else
+              puts "Good choice, now you can see a door at the back of the room!"
+              number_of_moves += 1
+              number_of_room_actions += 1
+              found_the_back_door = true
+          end
+        end
+    end
+  end
+  number_of_steps += 1
+end
 
 # endgoal: find back door and escape
 if found_the_back_door
