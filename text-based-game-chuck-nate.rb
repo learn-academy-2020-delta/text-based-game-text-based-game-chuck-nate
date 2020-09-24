@@ -177,66 +177,74 @@ while number_of_steps < 1
 end
 
 # can go into either must pay taxes, back of house, or need find lamp
-third_hallway_decision = "You see there is a room to your left, and a room to your right, but the hallway continues as well. To your left you smell the color of money💰.  To your right, you see nothing. What do you wanna do next? "
-puts third_hallway_decision
-# Prompt user to walk west
-number_of_steps = 0
-while number_of_steps < 1
-  puts possible_walk_moves
-  user_decision = gets.chomp
-  # puts user_decision.to_i.class
-  if user_decision.to_i == 2
-      puts "You've entered a room and it's pitch dark. "
-      puts "What do you wanna do next? "
-      number_of_moves = 0
-      while number_of_moves < 1
-        puts possible_actions
-        user_decision = gets.chomp
-        if user_decision.to_i != 1
-            puts "Wrong decision😳, choose again🤭..."
-        else
-            puts "Good choice, you found what appears to be a lamp!🪔"
-            puts possible_actions
-            user_decision = gets.chomp
-            if user_decision.to_i != 2
-                puts "Wrong decision😳, choose again🤭..."
-            else
-                puts "Good choice, now you can see a door at the back of the room!🚪"
-                number_of_moves += 1
-                found_the_back_door = true
-            end
-            # number_of_moves += 1
-        end
-      end
-      number_of_steps += 1
-  elsif user_decision.to_i == 4
-      puts "You've entered a room, and you see a stack of paper on the table.📑  Upon further inspection, you remember it's tax season. The gentleman in the room is willing to accept payment.🕴 "
-      puts "What do you wanna do next? "
-      number_of_moves = 0
-      while number_of_moves < 1
-        puts possible_actions
-        user_decision = gets.chomp
-        if user_decision.to_i != 1
-            puts "Wrong decision😳, choose again🤭..."
-        else
-            puts "Good choice, you found what appears to be a stack of $100's!💵"
-            puts "What do you wanna do next? "
-            puts possible_actions
-            user_decision = gets.chomp
-            if user_decision.to_i != 2
-                puts "Wrong decision😳, choose again🤭..."
-            else
-                puts "Good choice, you've paid your taxes!💸"
-                number_of_moves += 1
-            end
-            # number_of_moves += 1
-        end
-      end
-      number_of_steps += 1
-  else
-      puts "Wrong decision😳, choose again🤭..."
-  end
-end
+# third_hallway_decision = "You see there is a room to your left, and a room to your right, but the hallway continues as well. To your left you smell the color of money💰.  To your right, you see nothing. What do you wanna do next? "
+# puts third_hallway_decision
+# # Prompt user to walk west
+# number_of_steps = 0
+# while number_of_steps < 1
+#   puts possible_walk_moves
+#   user_decision = gets.chomp
+#   # puts user_decision.to_i.class
+#   if user_decision.to_i == 2
+#       puts "You've entered a room and it's pitch dark. "
+#       puts "What do you wanna do next? "
+#       number_of_moves = 0
+#       while number_of_moves < 1
+#         puts possible_actions
+#         user_decision = gets.chomp
+#         if user_decision.to_i != 1
+#             puts "Wrong decision😳, choose again🤭..."
+#         else
+#             puts "Good choice, you found what appears to be a lamp!🪔"
+#             puts possible_actions
+#             user_decision = gets.chomp
+#             if user_decision.to_i != 2
+#                 puts "Wrong decision😳, choose again🤭..."
+#             else
+#                 puts "Good choice, now you can see a door at the back of the room!🚪"
+#                 number_of_moves += 1
+#                 found_the_back_door = true
+#             end
+#             number_of_moves += 1
+#             number_of_room_actions += 1
+#             found_the_back_door = true
+#             # if found_the_back_door
+#             #   puts "Congratulations! Now you can stagger the rest of the way home!🥴🤮🏡"
+#             # else
+#             #   puts "Bad Choices lead to bad results!☠️"
+#             # end
+#             # number_of_moves += 1
+#         end
+#       end
+#       number_of_steps += 1
+#   elsif user_decision.to_i == 4
+#       puts "You've entered a room, and you see a stack of paper on the table.📑  Upon further inspection, you remember it's tax season. The gentleman in the room is willing to accept payment.🕴 "
+#       puts "What do you wanna do next? "
+#       number_of_moves = 0
+#       while number_of_moves < 1
+#         puts possible_actions
+#         user_decision = gets.chomp
+#         if user_decision.to_i != 1
+#             puts "Wrong decision😳, choose again🤭..."
+#         else
+#             puts "Good choice, you found what appears to be a stack of $100's!💵"
+#             puts "What do you wanna do next? "
+#             puts possible_actions
+#             user_decision = gets.chomp
+#             if user_decision.to_i != 2
+#                 puts "Wrong decision😳, choose again🤭..."
+#             else
+#                 puts "Good choice, you've paid your taxes!💸"
+#                 number_of_moves += 1
+#             end
+#             # number_of_moves += 1
+#         end
+#       end
+#       number_of_steps += 1
+#   else
+#       puts "Wrong decision😳, choose again🤭..."
+#   end
+# end
 
 # back in the third hallway
 back_of_the_house = "Congratulations, you're at the entrance to the last room! "
